@@ -17,7 +17,6 @@ public class TodoBusinessImplMockTest {
         TodoService mTodoServiceMock = mock(TodoService.class);
         when(mTodoServiceMock.retrieveToDosList("Dummy_User")).thenReturn(Arrays.asList("Learning Java Spring", "Learning Angular Js", "Learning Spring Bot"));
 
-
         TodoBusinessImpl mTodoBusinessImpl = new TodoBusinessImpl(mTodoServiceMock);
         List<String> filteredTodos = mTodoBusinessImpl.retrieveTodosRelatedToSpring("Dummy_User");
         Assert.assertEquals(2, filteredTodos.size());
